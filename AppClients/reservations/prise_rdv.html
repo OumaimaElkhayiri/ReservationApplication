@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Rendez-vous Coiffeur</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+        <link rel="stylesheet" href="priseRdv.css">
+    </head>
+
+    <body>
+        <div>
+            <nav class="navbar custom-navbar-background" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="http://localhost:3000/accueilClient">
+                        <img src="../Images/logo.png" width="auto" height="auto">
+                    </a>
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+                <div id="navbarBasicExample" class="navbar custom-navbar-background">
+                    <div class="navbar-start">
+                        <div class="navbar-item">
+                            <a id="Salons" href= "/Salons" class="enlever-soulignement">
+                                Salons
+                            </a>
+                        </div>
+                        <div class="navbar-item">
+                            <a id="Profil" href= "http://localhost:3000/profilClient" class="enlever-soulignement">
+                                Mon Profil
+                            </a>
+                        </div>
+                        <div class="navbar-item">
+                                <a href="http://localhost:3000/Affichage_Rdv" class="enlever-soulignement">
+                                    Reservations
+                                </a>
+                        </div>
+                        <div class="navbar-item">
+                            <a id="Coiffeurs" href= "http://localhost:3000/coiffeur" class="enlever-soulignement">
+                                Coiffeurs
+                            </a>
+                        </div>
+                    </div>
+                    <div class="navbar-end"> 
+                        <div class="navbar-item">
+                            <a id="btnConnexion" href= "/connexion" class="enlever-soulignement">
+                                Connexion
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </nav>
+        </div>
+        <div class="section">
+            <div class="container">
+                <h1 class="title">Prenez un rendez-vous avec votre coiffeur</h1>
+                <form >
+                    <div class="field">
+                        <label class="label" for="date">Date de reservation:</label>
+                        <div class="control">
+                            <input class="input" type="date" id="datereservation" name="datereservation">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label" for="time">Plage horaire :</label>
+                        <div class="control">
+                            <select id="time" name="time">
+                                <option value="08:00-14:00">08:00 - 14:00</option>
+                                <option value="09:00-15:00">09:00 - 15:00</option>
+                                <option value="10:00-16:00">10:00 - 16:00</option>
+                                <option value="11:00-17:00">11:00 - 17:00</option>
+                                <option value="12:00-18:00">12:00 - 18:00</option>
+                                <!-- Ajoutez d'autres options selon vos besoins -->
+                            </select>
+                        </div>
+                    </div>
+                    
+
+                    <div class="field">
+                        <label class="label" for="coiffeur">Coiffeur:</label>
+                        <div class="control">
+                            <div class="select">
+                                <select id="idCoiffeur" name="idCoiffeur">
+                                    <option value="0">Choisissez un coiffeur</option>
+                                    <option value="1">Ariana Grande</option>
+                                    <option value="2">Lana Del Rey</option>
+                                    <option value="3">Cha eun woo</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label" for="typeCoiffure">Type Coiffure:</label>
+                        <div class="control">
+                            <div class="select">
+                                <select id="typeCoiffure" name="typeCoiffure">
+                                    <option value="0">Choisissez un type de coiffure</option>
+                                    <option value="1">High Fade</option>
+                                    <option value="2">Low Fade</option>
+                                    <option value="3">Buzz Cut</option>
+                                    <option value="4">Undercut</option>
+                                    <option value="5">Pompadour</option>
+                                    <option value="6">Quiff</option>
+                                    <option value="7">Comb Over</option>
+                                    <option value="8">Slicked Back</option>
+                                    <option value="9">Faux Hawk</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                        
+                    <div class="field">
+                        <div class="control">
+                            <button class="button is-link" type="submit">Prendre rendez-vous</button>
+                        </div>
+                    </div>
+                </form>
+                <div id="reservationinfo">
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="./prise_rdv.js" type="module"></script>
+</html>

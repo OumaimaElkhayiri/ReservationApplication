@@ -1,0 +1,80 @@
+
+           /* Custom CSS for transparent grey background */
+            .custom-card-background {
+                background-color: rgb(31, 44, 37); /* Adjust the alpha value (last parameter) to control the transparency */
+            }
+            /* Custom CSS for transparent navbar background */
+            .custom-navbar-background {
+                background-color:  rgb(31, 44, 37); /* Adjust the alpha value (last parameter) to control the transparency */
+            }
+
+            .custom-card-header {
+            background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+            color: white; /* White text color */
+            padding: 10px; /* Add padding for better appearance */
+            }
+
+            .titre-carte {
+                color: white;
+            }
+
+            body {
+            background-color: rgb(31, 44, 37);
+            }
+            
+            .icon-button {
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 24px;
+            margin-right: 10px;
+            }
+
+            .icon-button:hover {
+            color: #ffffff80; /* Change la couleur de l'icône au survol */
+            }
+
+            .image-container {
+                margin-top: 20px;
+                display: flex;
+                justify-content: space-around; /* This will add some space around the images */
+            }
+
+            .image-container img {
+                width: 600px; /* This will make the images smaller. Adjust as needed. */
+            }
+            .salon-description {
+            background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
+            color: white; /* White text color */
+            padding: 20px; /* Padding for better appearance */
+            border-radius: 10px; /* Rounded corners */
+            border: none;
+            }
+
+            .header-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            }
+
+            .header-title h1 {
+            font-size: 48px; /* Adjust the font size as needed */
+            }
+
+            .header-title a {
+            color: inherit; /* Cette règle permet de conserver la couleur par défaut du texte */
+            text-decoration: none; /* Enlève le soulignement du lien */
+            }
+
+            #title {
+            color: whitesmoke;
+            }
+
+
+            .enlever-soulignement {
+                text-decoration: none;
+                color:white;
+              }

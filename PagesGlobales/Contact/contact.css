@@ -1,0 +1,128 @@
+html,body{
+    background-color: #ffffff;
+    margin-top: 0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    }
+      
+    .field:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    
+    .navbar {
+        margin: 0;
+        position: relative;
+        top: 0;
+        width: 100%;
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.8); 
+      }
+
+    .navbar-icons {
+        display: flex; /* Flex layout for icons */
+        flex-direction: row; /* Align items horizontally */
+        gap: 10px; /* Space between icons */
+        align-items: center; /* Vertically center the icons */
+    }
+
+    .navbar-icons a {
+        font-size: 1.5em; /* Increase the font size to make icons bigger */
+        padding: 10px; /* Add padding for extra space around icons */
+    }
+
+    .navbarRecherche {
+        position: absolute;
+        top:50%;
+        left:70%;
+
+    }
+
+    .icon-button {
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 24px;
+        margin-right: 10px;
+    }
+    
+    .icon-button:hover {
+        color: #ffffff80; /* Change la couleur de l'icône au survol */
+    }
+      
+    .hero.is-fullheight {
+        min-height: calc(100vh - 6.5rem - 40px);
+    }        
+    
+    .header-title {
+        position: absolute;
+        top: 50%;
+        left: 44%;
+        right:80%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .header-title h1 {
+        font-size: 48px; /* Adjust the font size as needed */
+    }
+    
+    .enlever-soulignement {
+        text-decoration: none;
+        color:white;
+    }
+
+    /* Adjusting hero section for flex alignment */
+.hero-body {
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Column-based alignment */
+    justify-content: center; /* Align content towards the center */
+    align-items: center; /* Center content horizontally */
+}
+
+/* Adjusting columns to ensure proper alignment */
+.columns {
+    align-items: flex-end; /* Align elements at the bottom */
+    justify-content: space-between; /* Space out content */
+}
+
+/* Adding padding and gap for the form column */
+.column.is-one-third {
+    padding-top: 20px; /* Add padding at the top to adjust vertical position */
+}
+
+/* Space between sections */
+.container {
+    margin-bottom: 20px; /* Add margin to separate containers */
+}
+
+
+
+    /* Adjust font size of the contact message */
+.contact-message {
+    font-size: 22px; /* Slightly smaller font size */
+}
+
+.image-text {
+    display: flex; /* Flexbox for side-by-side layout */
+    gap: 20px; /* Add space between image and text */
+    padding: 15px; /* Add padding around the container */
+    width: 75%; /* Example: 50% of the container's width */
+    
+}
+
+
+    /* Change the button color to black */
+.button.is-link {
+    background-color: #000000; /* Black color for the button */
+}
+
+.button.is-link:hover {
+    background-color: #333333; /* Dark gray on hover */
+}
+
+
+

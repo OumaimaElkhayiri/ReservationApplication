@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profil client</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profil client</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="ProfilClient.css">
+</head>
+<body>
+    <nav class="navbar custom-navbar-background" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="http://localhost:3000/accueilClient">
+                <img src="../Images/logo.png" width="auto" height="auto">
+            </a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar custom-navbar-background">
+            <div class="navbar-start">
+                <div class="navbar-item">
+                    <a id="Salons" href= "/Salons" class="enlever-soulignement">
+                        Salons
+                    </a>
+                </div>
+                <div class="navbar-item">
+                    <a id="Profil" href= "http://localhost:3000/profilClient" class="enlever-soulignement">
+                        Mon Profil
+                    </a>
+                </div>
+                <div class="navbar-item">
+                        <a href="http://localhost:3000/Affichage_Rdv" class="enlever-soulignement">
+                            Reservations
+                        </a>
+                </div>
+                <div class="navbar-item">
+                    <a id="Coiffeurs" href= "http://localhost:3000/coiffeur" class="enlever-soulignement">
+                        Coiffeurs
+                    </a>
+                </div>
+            </div>
+            <div class="navbar-end"> 
+                <div class="navbar-item">
+                    <a id="btnConnexion" href= "/connexion" class="enlever-soulignement">
+                        Connexion
+                    </a>
+                </div>
+                <div class="navbar-icons a"> 
+                    <a href="/creationCompte" class="enlever-soulignement" id="btnCreationCompte">
+                        <i class="fas fa-user-plus"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+ </nav>
+ <section class="container mt-5">
+    <div class="columns"> <!-- Standard column layout -->
+        <!-- Left column: Profile form -->
+        <div class="column is-half"> <!-- Take half of the container's width -->
+            <div class="card"> <!-- Card with adjusted size -->
+                <div class="card-content"> <!-- Content within the card -->
+                    <h2 class="title is-4">Mon Compte</h2>
+                    <hr> <!-- Horizontal divider -->
+                    <form id="profileForm"> <!-- Form within card -->
+                        <!-- Form Fields -->
+                        <div class="field">
+                            <label class="label">Prénom</label>
+                            <div class="control">
+                                <input class="input" type="text" placeholder="Prénom" id="inputPrenom">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Nom</label>
+                            <div class="control">
+                                <input class="input" type="text" placeholder="Nom" id="inputNom">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Nom d'utilisateur</label>
+                            <div class="control">
+                                <input class="input" type="text" placeholder="Nom d'utilisateur" id="inputUsername">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Téléphone</label>
+                            <div class="control">
+                                <input class="input" type="text" placeholder="Téléphone" id="inputTelephone">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Mot de passe</label>
+                            <div class="control">
+                                <input class="input" type="password" placeholder="Mot de passe" id="inputMDP">
+                            </div>
+                        </div>
+                        <!-- Button Group -->
+                        <!-- <div class="field is-grouped">
+                            <div class="control">
+                                <button class="button is-link" id="modifierMDP">Modifier le profil</button>
+                            </div>
+                            <div class="control">
+                                <button class="button is-link" id="enregistrer">Enregistrer</button>
+                            </div>
+                            <div class="control">
+                                <button class="button is-light" id="annuler">Annuler</button>
+                            </div>
+                        </div> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right column: Review card -->
+        <div class="column is-half"> <!-- Take the other half of the container's width -->
+            <div class="card">
+                <div class="card-content">
+                    <h2 class="title is-4">Avis sur les coiffeurs</h2>
+                    <form>
+                        <div class="field">
+                            
+                                <div class="control">
+                                    <button class="button is-light" id="avis">
+                                        <a href="/AvisCoiffeur">Aller vers les avis
+                                        </a>
+                                        </button>
+                                </div>
+                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+<script src="./profil_client.js" type="module"></script>
+
+</html>

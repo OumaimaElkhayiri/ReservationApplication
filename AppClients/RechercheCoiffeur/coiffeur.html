@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page Acceuil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+ <link rel="stylesheet" href="RechercheCoiffeur.css">
+  
+</head>
+<body>
+    <nav class="navbar custom-navbar-background" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="http://localhost:3000/accueilClient">
+                <img src="../Images/logo.png" width="auto" height="auto">
+            </a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar custom-navbar-background">
+            <div class="navbar-start">
+                <div class="navbar-item">
+                    <a id="Salons" href= "/Salons" class="enlever-soulignement">
+                        Salons
+                    </a>
+                </div>
+                <div class="navbar-item">
+                    <a id="Profil" href= "http://localhost:3000/profilClient" class="enlever-soulignement">
+                        Mon Profil
+                    </a>
+                </div>
+                <div class="navbar-item">
+                        <a href="http://localhost:3000/Affichage_Rdv" class="enlever-soulignement">
+                            Reservations
+                        </a>
+                </div>
+                <div class="navbar-item">
+                    <a id="Coiffeurs" href= "http://localhost:3000/coiffeur" class="enlever-soulignement">
+                        Coiffeurs
+                    </a>
+                </div>
+              
+            </div>
+            <div class="navbar-end"> 
+                <div class="navbar-item">
+                    <a id="btnConnexion" href= "/connexion" class="enlever-soulignement">
+                        Connexion
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+ </nav>
+    <div class="container">
+        <div class="section" style="max-width: 900px;">
+            <div class="columns">
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                        <label class="label" for="coiffeur">Rechercher un coiffeur</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <div class="control" style="min-width: 200px">
+                                <div>
+                                    <input class="input" type="text" placeholder="Entrez le nom du coiffeur" id="filterNom">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="coiffeurs" class="columns is-multiline"></div>
+    </div>
+</body>
+<script src="coiffeur.js" type="module"></script>
+</html>

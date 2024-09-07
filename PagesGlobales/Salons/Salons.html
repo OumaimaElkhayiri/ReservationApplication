@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page Salon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="Salons.css">
+</head>
+<body>
+    <div>
+        <nav class="navbar custom-navbar-background" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="http://localhost:3000/Acceuil">
+                    <img src="../Images/logo.png" width="auto" height="auto">
+                </a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div id="navbarBasicExample" class="navbar custom-navbar-background">
+                <div class="navbar-start">
+                    <div class="navbar-item">
+                        <a id="informations" href="/informations" class="enlever-soulignement">
+                            Informations
+                        </a>
+                    </div>
+                        <div class="navbar-item">
+                            <a id="reservations" class="enlever-soulignement">
+                            Rendez-vous
+                            </a>
+                        </div>
+                    <div class="navbar-item">
+                        <a id="Salons" href= "/Salons" class="enlever-soulignement">
+                            Salons
+                        </a>
+                    </div>
+                    <div class="navbar-item">
+                        <a id="Profil" href= "http://localhost:3000/profilClient" class="enlever-soulignement">
+                            Mon Profil
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="header-title">
+                        <a href="http://localhost:3000/Acceuil" class="enlever-soulignement" id="titre">
+                            <h1>UniK</h1>
+                        </a>
+                        </div>
+                </div>
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <a id="btnConnexion" href= "/connexion" class="enlever-soulignement">
+                            Connexion
+                        </a>
+                    </div> 
+                    <div class="navbar-icons a"> 
+                        <a href="/creationCompte" class="enlever-soulignement" id="btnCreationCompte">
+                            <i class="fas fa-user-plus"></i>
+                        </a>
+                    </div>
+                </div> 
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <div id="salonA" class="image-text">
+            <img src="https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Salon Image">
+            <div class="description">
+                <h2>Salon A</h2>
+                <p>
+                    Au cœur d'un quartier dynamique, notre salon de barbier hipster est un havre pour les passionnés de style rétro et de tendances modernes. 
+                    Avec ses briques apparentes, ses néons colorés, et ses fauteuils en cuir vintage, l'atmosphère y est décontractée et accueillante. 
+                    Nos barbiers talentueux maîtrisent l'art du rasage traditionnel et des coupes tendance, créant des looks qui allient classique et innovation. 
+                    Venez profiter de notre sélection de musique indie, d'un café artisanal ou d'une bière locale pendant que nous vous offrons une expérience de grooming unique et personnalisée. 
+                </p>
+                    <div class="button-container">
+                        <button class="button-rectangle priseRDV">Prendre Rendez-vous</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+      
+    <div class="container">
+        <div id="salonB" class="image-text">
+            <img src="https://images.pexels.com/photos/1654834/pexels-photo-1654834.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Salon Image">
+                        <div class="description">
+                <h2>Salon B</h2>
+                <p>
+                    Depuis plus de 50 ans, notre salon de coiffure situé dans un quartier élégant de la ville est le choix privilégié des hommes et des femmes à la recherche d'un service de coiffure raffiné. 
+                    Avec son décor classique et chaleureux, des miroirs encadrés en bois et des fauteuils confortables, notre salon offre une ambiance apaisante où vous vous sentirez immédiatement à l'aise. 
+                    Notre équipe expérimentée propose des coupes intemporelles et des colorations de qualité, répondant aux attentes d'une clientèle de classe moyenne haute. 
+                    Venez profiter d'une coupe sophistiquée dans un environnement accueillant où chaque client est traité avec le plus grand soin.
+                </p>
+                <a>
+                    <div class="button-container">
+                        <button class="button-rectangle priseRDV">Prendre Rendez-vous</button>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div id="salonC" class="image-text">
+            <img src="https://images.pexels.com/photos/7195805/pexels-photo-7195805.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Salon Image">
+            <div class="description">
+                <h2>Salon C</h2>
+                <p>
+                    Situé au cœur du centre-ville, notre salon de coiffure haut de gamme accueille une clientèle de tout âge, attirée par son raffinement et son savoir-faire exceptionnel. 
+                    Dès que vous franchissez nos portes, vous êtes accueilli par un espace moderne et élégant, avec des lignes épurées, des lumières tamisées et des touches de design contemporaines. 
+                    Notre équipe de stylistes talentueux propose des coupes innovantes, des colorations tendance et des traitements de soins capillaires exclusifs. 
+                    Que vous soyez un jeune professionnel ou une personne d'expérience, vous apprécierez notre approche personnalisée qui vise à mettre en valeur votre style unique. 
+                    Offrez-vous une expérience coiffure sophistiquée dans un cadre urbain et dynamique, où chaque détail est pensé pour votre confort et votre satisfaction.              
+                </p>
+                    <div class="button-container">
+                        <button class="button-rectangle priseRDV">Prendre Rendez-vous</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div id="salonD" class="image-text">
+            <img src="https://images.pexels.com/photos/7195811/pexels-photo-7195811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Salon Image">
+                        <div class="description">
+                <h2>Salon D</h2>
+                <p>
+                    Notre salon de coiffure, niché dans un charmant quartier résidentiel, se distingue par son ambiance simple et épurée tout en offrant des services de luxe. 
+                    Les lignes modernes, les couleurs neutres et les éléments de design minimalistes créent un environnement élégant sans ostentation. 
+                    Vous y trouverez le luxe sans l'effervescence, un lieu où nos stylistes experts vous accueillent dans un espace serein. 
+                    Ici, chaque détail est soigneusement pensé pour votre confort. Les clients apprécient la tranquillité et la discrétion, tout en bénéficiant de traitements de haute qualité. 
+                    C'est le lieu idéal pour ceux qui recherchent une expérience de coiffure premium dans un cadre calme et sophistiqué.               
+                </p>
+                    <div class="button-container">
+                        <button class="button-rectangle priseRDV">Prendre Rendez-vous</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div id="salonE" class="image-text">
+            <img src="https://images.pexels.com/photos/7031704/pexels-photo-7031704.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Salon Image">
+                        <div class="description">
+                <h2>Salon E</h2>
+                <p>
+                    Notre salon de coiffure, situé dans le Vieux-Port de Montréal et associé à un spa, offre une expérience luxueuse pour une clientèle raffinée. 
+                    L'atmosphère zen avec ses tons apaisants et ses plantes luxuriantes crée un espace propice à la détente. 
+                    Avant votre rendez-vous, détendez-vous au spa avec des soins exclusifs. Nos stylistes expérimentés garantissent des coupes et des traitements haut de gamme. 
+                    C'est l'endroit parfait pour ceux qui souhaitent se faire dorloter dans un environnement calme, où le luxe et la tranquillité se rencontrent.       
+                </p>
+                <a>
+                    <div class="button-container">
+                        <button class="button-rectangle priseRDV">Prendre Rendez-vous</button>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div id="salonF" class="image-text">
+            <img src="https://images.pexels.com/photos/8867541/pexels-photo-8867541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Salon Image">
+                        <div class="description">
+                <h2>Salon F</h2>
+                <p>
+                    Situé dans une rue tranquille du quartier Rosemont à Montréal, notre salon de barbier est une entreprise familiale qui a ouvert ses portes il y a plus de 45 ans. 
+                    Fondé par un homme passionné par l'art du rasage et de la coiffure masculine, le salon a conservé son charme authentique et son esprit convivial. 
+                    C'est un endroit simple où les habitués se sentent comme chez eux.
+                    Chaque visite est une occasion de retrouver la chaleur d'une petite communauté et de profiter d'un service personnalisé, transmis de génération en génération.              
+                </p>
+                <a>
+                    <div class="button-container">
+                        <button class="button-rectangle priseRDV">Prendre Rendez-vous</button>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+    <footer class="footer">
+        <div class="container">
+            <div class="">
+                <p>All rights to Équipe 3</p>
+                <p>David Chiu | Capucine Dubois | Alvaro Rodriguez | El Khayiri Oumaima</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./Salons.js" type="module"></script>
+</body>
+</html>
+
+
+

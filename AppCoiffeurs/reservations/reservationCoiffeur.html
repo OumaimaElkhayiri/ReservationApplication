@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>TEST Reviews Coiffeurs</title>
+        <!-- Bulma CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+        <!-- Fonts and icons -->
+        <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet">
+        <link href="http://fonts.googleapis.com/css?family=Roboto:400,700,300" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="reservationCoiffeur.css">
+    </head>
+
+    <body>
+        <div class="main-content">
+            <nav class="navbar custom-navbar-background" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="http://localhost:3000/Acceuil">
+                        <img src="../Images/logo.png" width="auto" height="auto">
+                    </a>
+                    
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+                
+                <div id="navbarBasicExample" class="navbar-menu custom-navbar-background">
+                    <div class="navbar-start">
+                        <div class="navbar-item">
+                            <a id="Avis" href="http://localhost:3000/AvisCoiffeur" class="titre-carte enlever-soulignement">
+                                AvisClients
+                            </a>
+                        </div>
+                        <div class="navbar-item">
+                            <a id="reservations" href= "http://localhost:3000/reservationCoiffeur" class="enlever-soulignement">
+                                RéservationsClients
+                            </a>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="header-title">
+                            <a href="http://localhost:3000/Acceuil" class="enlever-soulignement">
+                                <h1>UniK</h1>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="navbar-end"> 
+                        <div class="navbar-icons a"> 
+                            <a href="/connexion" class="enlever-soulignement">
+                                <i class="fas fa-sign-in-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+        <div class="container">
+            <div class="section">
+                <h1 class="title">Reservations</h1>
+                <form>
+                    <div class="field has-addons is-centered">
+                        <div class="control">
+                            <input class="input" type="text" id="idCoiffeur" name="nom" placeholder="Nom du coiffeur">
+                        </div>
+                    </div>
+                </form>
+
+                <div class="control">
+                    <button class="button is-info" id="searchButton">Search</button>
+                </div>
+                <br>
+                
+                <div class="table-container" id="results">
+                    <table class="table is-bordered is-hoverable is-fullwidth" id="tableResults">
+                        <thead>
+                            <tr>
+                                <th tableid="id">Numero Reservation</th>
+                                <th>Date</th>
+                                <th>Heure</th>
+                                <th>Coiffeur</th>
+                                <th>Client</th>
+                                <th>Service</th>
+                            </tr>
+                        </thead>
+                        
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>All rights to Equipe 3</p>
+                <p>David Chiu | Capucine Dubois | Alvaro Rodriguez | Oumaima El Khayiri </p>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="reservationCoiffeur.js"></script>
+    </div>
+    </body>
+
+</html>

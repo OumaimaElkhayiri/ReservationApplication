@@ -1,0 +1,172 @@
+html, body{
+    background-color: #ffffff;
+    margin-top: 0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    }
+      
+    .field:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    
+    .navbar {
+        margin: 0;
+        position: relative;
+        top: 0;
+        width: 100%;
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.8); 
+      }
+
+    .navbar-icons {
+        display: flex; /* Flex layout for icons */
+        flex-direction: row; /* Align items horizontally */
+        gap: 10px; /* Space between icons */
+        align-items: center; /* Vertically center the icons */
+    }
+
+    .navbar-icons a {
+        font-size: 1.5em; /* Increase the font size to make icons bigger */
+        padding: 10px; /* Add padding for extra space around icons */
+    }
+
+    .navbarRecherche {
+        position: absolute;
+        top:50%;
+        left:70%;
+
+    }
+
+    .icon-button {
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 24px;
+        margin-right: 10px;
+    }
+    
+    .icon-button:hover {
+        color: #ffffff80; /* Change la couleur de l'icône au survol */
+    }
+
+        
+    .header-title {
+        position: absolute;
+        top: 50%;
+        left: 35%;
+        right:80%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .header-title h1 {
+        font-size: 48px; /* Adjust the font size as needed */
+    }
+    
+    .enlever-soulignement {
+        text-decoration: none;
+        color:white;
+    }
+
+    .video-container {
+        position: relative;
+        width: 100%;
+        height: calc(100vh - 60px); /* Take up remaining height after navbar */
+        overflow: hidden; /* Hide any overflowing content */
+    }
+
+    #bg-video {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%); /* Center the video horizontally */
+        width: 100%;
+        min-width: 100%; /* Ensure video covers the entire width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .slogan {
+        position: absolute; 
+        top: 50%; 
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1; 
+        width: 80%; /* Adjust the width as needed */
+    }
+
+    .slogan-text {
+        color: white; /* Set the color of the tagline text to white */
+        font-size: 40px; /* Adjust the font size as needed */
+        text-align: center; /* Center-align the tagline text */
+        font-family: 'Times New Roman', serif;
+    }
+      
+    .hero.is-fullheight {
+        min-height: calc(100vh - 6.5rem - 40px);
+    }        
+
+    
+    .card {
+      width: calc(33.33% - 20px); /* Adjust the width to fit three cards per row */
+      margin: 20px 10px; /* Adjust margin to create space between cards */
+      float: left; /* Float the cards to align them horizontally */
+      box-sizing: border-box; /* Include padding and border in the width */
+      background-color: rgba(0, 0, 0, 0.03);
+      color: black;
+      border: 3px rgba(0,0,0,0.4); /* Slim black border */
+    }
+    
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+    }
+    
+    .card-title {
+        background-color: white; /* White background */
+        border: 2px solid black; /* Black border */
+        color: black; /* Black text color */
+        padding: 10px; /* Padding for comfortable spacing */
+        font-size: medium; /* Medium font size */
+        font-weight: bold; /* Bold text */
+        text-align: center; /* Center the text */
+        border-radius: 0; /* No rounded corners */
+      }
+
+      .card-title:hover {
+        background-color: black; /* Black background on hover */
+        color: white; /* White text on hover */
+        transition: all 0.3s ease; /* Smooth transition for hover effect */
+      }
+
+    .img {
+        filter: grayscale(100%);
+        cursor: pointer;
+        transition: all 1.5s ease;
+    }
+
+    .img:hover {
+        filter: grayscale(0%);
+    }
+
+/* Footer Styling */
+.footer {
+    position: relative; 
+    width: 100%; 
+    height: 50px; /* Footer height */
+    bottom: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+    color: white; /* White text */
+    font-size: 20px; /* Set the font size */
+}
+
+.footer .container {
+    font-size: 20px; /* Apply font size to container */
+}
+
+.footer p {
+    font-size: 20px; /* Apply font size directly to paragraph */
+}

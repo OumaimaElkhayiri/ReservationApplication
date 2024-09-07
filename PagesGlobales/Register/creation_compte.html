@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page Connexion</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/15181efa86.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="creationCompte.css">
+</head>
+<body>
+  <div>
+    <nav class="navbar custom-navbar-background" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="http://localhost:3000/Acceuil">
+            <img src="../Images/logo.png" width="auto" height="auto">
+        </a>       
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+      </div> 
+      <div id="navbarBasicExample" class="navbar custom-navbar-background">
+        <div class="navbar-start">
+          <div class="navbar-item">
+            <a id="informations" href="/informations" class="enlever-soulignement">
+              Informations
+            </a>
+          </div>
+          <div class="navbar-item">
+            <a id="reservations" href= "/connexion" class="enlever-soulignement">
+              Rendez-vous
+            </a>
+          </div>
+          <div class="navbar-item">
+            <a id="Salons" href= "/Salons" class="enlever-soulignement">
+              Salons
+            </a>
+          </div>
+        </div>
+        <div class="header-title">
+          <a href="http://localhost:3000/Acceuil" class="enlever-soulignement">
+            <h1>UniK</h1>
+          </a>
+        </div>
+          <div class="navbar-end"> 
+            <div class="navbar-icons a"> 
+              <a href="/connexion" class="enlever-soulignement">
+                <i class="fas fa-sign-in-alt"></i>
+              </a>
+            </div>
+          </div> 
+      </div>
+    </nav>
+</div>
+<section class="hero is-fullheight">
+  <div class="hero-body">
+      <div class="container has-text-centered"> <!-- Centered content -->
+          <div class="form-card"> <!-- Card with white background and centered content -->
+              <h1>S'inscrire</h1> <!-- Centered title -->
+              <form>
+                  <div class="columns"> <!-- Divided into two columns -->
+                      <!-- Left Column -->
+                      <div class="column">
+                          <div class="field">
+                              <label for="prenom" class="label">Prénom</label>
+                              <div class="control">
+                                  <input id="prenom" name='prenom'class="input is-medium" type="text" placeholder="Prénom">
+                              </div>
+                          </div>
+                          <div class="field">
+                              <label for="nom" class="label">Nom</label>
+                              <div class="control">
+                                  <input id="nom" class="input is-medium" type="text" placeholder="Nom">
+                              </div>
+                          </div>
+                          <div class="field">
+                            <label for="username" class="label">username</label>
+                            <div class="control">
+                                <input id="username" class="input is-medium" type="text" placeholder="username">
+                            </div>
+                        </div>
+                          <div class="field">
+                              <label for="telephone" class="label">Téléphone</label>
+                              <div class="control">
+                                  <input id="telephone" class="input is-medium" type="text" placeholder="Téléphone">
+                              </div>
+                          </div>
+                          <div class field="motDePasse" class="field">
+                              <label for="motDePasse" class="label">Mot de passe</label>
+                              <div class="control">
+                                  <input id="motDePasse" class="input is-medium" type="password" placeholder="Mot de passe">
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <!-- Divider -->
+                      <div class="divider"></div>
+                      
+                      <!-- Right Column -->
+                      <div class="column">
+                          <h2>Coiffeur? Remplissez ces champs additionnels:</h2>
+                          <div class="field">
+                              <label class="checkbox" for="estCoiffeur">
+                                  <input id="estCoiffeur" type="checkbox" />Je suis un coiffeur
+                              </label>
+                          </div>
+                          <div class="field">
+                              <label for="idSalon" class="label">Numéro du salon (pour les coiffeurs)</label>
+                              <div class="control">
+                                  <input id="idSalon" class="input is-medium" type="text" placeholder="Numéro du salon">
+                              </div>
+                          </div>
+                          <div class="field">
+                              <label for="disponibilites" class="label">Disponibilités du coiffeur</label>
+                              <div class="control">
+                                  <input id="disponibilites" class="input is-medium" type="text" placeholder="Entrez vos disponibilités">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <!-- Bottom of the card -->
+                  <button class="button is-link is-medium">Créer un compte</button> <!-- Full-width button at the bottom -->
+              </form>
+          </div>
+      </div>
+  </div>
+</section>
+</body>
+  <footer class="footer">
+    <div>
+        <p>All rights to Equipe 3</p>
+        <p>David Chiu | Capucine Dubois | Alvaro Rodriguez | El khayiri Oumaima</p>
+    </div>
+  </footer>
+  <script src="./creationCompteScript.js"></script>
+</html>

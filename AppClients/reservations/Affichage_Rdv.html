@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rendez-vous Coiffeur</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="priseRdv.css"> <!-- Fichier de styles personnalisés -->
+</head>
+
+<body>
+    <div>
+        <nav class="navbar custom-navbar-background" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="http://localhost:3000/accueilClient">
+                    <img src="../Images/logo.png" width="auto" height="auto">
+                </a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div id="navbarBasicExample" class="navbar custom-navbar-background">
+                <div class="navbar-start">
+                    <div class="navbar-item">
+                        <a id="Salons" href= "/Salons" class="enlever-soulignement">
+                            Salons
+                        </a>
+                    </div>
+                    <div class="navbar-item">
+                        <a id="Profil" href= "http://localhost:3000/profilClient" class="enlever-soulignement">
+                            Mon Profil
+                        </a>
+                    </div>
+                    <div class="navbar-item">
+                            <a href="http://localhost:3000/Affichage_Rdv" class="enlever-soulignement">
+                                Reservations
+                            </a>
+                    </div>
+                    <div class="navbar-item">
+                        <a id="Coiffeurs" href= "http://localhost:3000/coiffeur" class="enlever-soulignement">
+                            Coiffeurs
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar-end"> 
+                    <div class="navbar-item">
+                        <a id="btnConnexion" href= "/connexion" class="enlever-soulignement">
+                            Connexion
+                        </a>
+                    </div>
+                    <div class="navbar-icons a"> 
+                        <a href="/creationCompte" class="enlever-soulignement" id="btnCreationCompte">
+                            <i class="fas fa-user-plus"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </nav>
+    </div>
+    <section class="section">
+        <div class="container">
+            <div id="reservationinfo" class="columns is-multiline">
+
+                
+            </div>
+        </div>
+    </section>
+    <script src="./Affichage_Rdv.js" type="module"></script>
+</body>
+</html>

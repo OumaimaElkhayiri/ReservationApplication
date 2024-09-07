@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page Accueil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="AcceuilBase.css">
+</head>
+<body>
+    <div>
+        <nav class="navbar custom-navbar-background" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="http://localhost:3000/Acceuil">
+                    <img src="../Images/logo.png" width="auto" height="auto">
+                </a>
+                
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            
+            <div id="navbarBasicExample" class="navbar custom-navbar-background">
+                <div class="navbar-start">
+                
+                    <div class="navbar-item">
+                        <a id="informations" href="/informations" class="enlever-soulignement">
+                            Informations
+                        </a>
+                    </div>
+                
+                        <div class="navbar-item">
+                            <a id="reservations" class="enlever-soulignement">
+                            Rendez-vous
+                            </a>
+                        </div>
+        
+                    <div class="navbar-item">
+                        <a id="Salons" href= "/Salons" class="enlever-soulignement">
+                            Salons
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <div class="header-title">
+                        <a href="http://localhost:3000/Acceuil" class="enlever-soulignement">
+                            <h1>UniK</h1>
+                        </a>
+                        </div>
+                </div>
+                <div class="navbar-end"> 
+                    <div class="navbar-item">
+                        <a id="btnConnexion" href= "/connexion" class="enlever-soulignement">
+                            Connexion
+                        </a>
+                    </div>
+                    <div class="navbar-icons a"> 
+                        <a href="/creationCompte" class="enlever-soulignement" id="btnCreationCompte">
+                            <i class="fas fa-user-plus"></i>
+                        </a>
+                    </div>
+                </div> 
+            </div>
+        </nav>
+    </div>
+    <div>
+        <div>
+            <div class="video-container"> 
+                <video autoplay muted loop id="bg-video">
+                    <source src="https://videos.pexels.com/video-files/3997198/3997198-uhd_4096_2160_25fps.mp4" type="video/mp4"> 
+                </video>
+                <div class="slogan">
+                    <p class="slogan-text">Les meilleurs salons de Montréal, regroupés dans une seule application.</p>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <a href="/Salons#salonA" class="card-link" style="text-decoration: none;">
+                <div class="card">
+                    <img src="https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Salon A" style="width: 100%" class="img">
+                    <div class="container">
+                        <h4 class="card-title"><b>Salon A</b></h4>  
+                    </div>
+                </div>
+            </a>
+            <a href="/Salons#salonB" class="card-link" style="text-decoration: none;">
+                <div class="card">
+                    <img src="https://images.pexels.com/photos/1654834/pexels-photo-1654834.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Avatar" style="width:100%" class="img">
+                    <div class="container">
+                        <h4 class="card-title"><b>Salon B</b></h4> 
+                    </div>
+                </div>
+            </a>    
+            <a href="/Salons#salonC" class="card-link" style="text-decoration: none;">
+                <div class="card" a href="/salon#salonC">
+                    <img src="https://images.pexels.com/photos/7195805/pexels-photo-7195805.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Avatar" style="width:100%" class="img">
+                    <div class="container">
+                        <h4 class="card-title"><b>Salon C</b></h4> 
+                    </div>
+                </div>
+            </a>
+            <a href="/Salons#salonD" class="card-link" style="text-decoration: none;">
+                <div class="card" a href="/salon#salonD">
+                    <img src="https://images.pexels.com/photos/7195811/pexels-photo-7195811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Avatar" style="width:100%" class="img">
+                    <div class="container">
+                        <h4 class="card-title"><b>Salon D</b></h4> 
+                    </div>
+                </div>
+            </a>
+            <a href="/Salons#salonE" class="card-link" style="text-decoration: none;">
+                <div class="card" a href="/salon#salonE">
+                    <img src="https://images.pexels.com/photos/7031704/pexels-photo-7031704.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Avatar" style="width:100%" class="img">
+                    <div class="container">
+                        <h4 class="card-title"><b>Salon E</b></h4> 
+                    </div>
+                </div>
+            </a>
+            <a href="/Salons#salonF" class="card-link" style="text-decoration: none;">
+                <div class="card" a href="/salon#salonF">
+                    <img src="https://images.pexels.com/photos/8867541/pexels-photo-8867541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Avatar" style="width:100%" class="img">
+                    <div class="container">
+                        <h4 class="card-title"><b>Salon F</b></h4> 
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+<script src="Accueil.js" type="module"></script>
+<footer class="footer">
+    <div>
+        <p>All rights to Equipe 3</p>
+        <p>David Chiu | Capucine Dubois | Alvaro Rodriguez | Oumaima El khayiri </p>
+    </div>
+</footer>
+</html>

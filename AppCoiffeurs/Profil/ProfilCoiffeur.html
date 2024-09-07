@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Page Coiffeur</title>
+        <link rel="stylesheet" href="ProfilCoiffeur.css">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+        <style>
+                /* Adjust the alpha value (last parameter) to control the transparency */
+            
+            /* Custom CSS for transparent grey background */
+            .custom-card-background {
+                background-color: rgb(31, 44, 37); /* Adjust the alpha value (last parameter) to control the transparency */
+            }
+            
+            /* Custom CSS for transparent navbar background */
+            .custom-navbar-background {
+                background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+            }
+            
+            /* Custom CSS for card header */
+            .custom-card-header {
+                background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+                color: white; /* White text color */
+                padding: 10px; /* Add padding for better appearance */
+            }
+
+            .navbar {
+                margin: 0;
+                position: relative;
+                top: 0;
+                width: 100%;
+                display: flex;
+                background-color: rgba(0, 0, 0, 0.8); 
+            }
+
+            .navbar-icons {
+            display: flex; /* Flex layout for icons */
+            flex-direction: row; /* Align items horizontally */
+            gap: 10px; /* Space between icons */
+            align-items: center; /* Vertically center the icons */
+            }
+
+            .navbar-icons a {
+                font-size: 1.5em; /* Increase the font size to make icons bigger */
+                padding: 10px; /* Add padding for extra space around icons */
+            }
+
+            .navbarRecherche {
+                position: absolute;
+                top:50%;
+                left:70%;
+            }
+            
+            .titre-carte {
+                color: white;
+            }
+            /* Style pour les icônes */
+            .icon-button {
+                background-color: transparent;
+                border: none;
+                color: white;
+                font-size: 24px;
+                margin-right: 10px;
+            }
+
+            .icon-button:hover {
+                color: #ffffff80; /* Change la couleur de l'icône au survol */
+            }
+
+            /* Custom CSS for salon description */
+            .salon-description {
+                background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
+                color: white; /* White text color */
+                padding: 20px; /* Padding for better appearance */
+                border-radius: 10px; /* Rounded corners */
+                border: none;
+            }
+
+        /* Custom CSS for header title */
+            .header-title {
+                position: absolute;
+                top: 50%;
+                left: 35%;
+                right:80%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                color: rgba(255, 255, 255, 0.8);
+            }
+
+            .header-title h1 {
+                font-size: 48px; /* Adjust the font size as needed */
+            }    
+
+            .enlever-soulignement {
+                text-decoration: none;
+                color:white;
+            }
+
+            /* Style pour les icônes */
+            .icon-button {
+                background-color: transparent;
+                border: none;
+                color: white;
+                font-size: 24px;
+                margin-right: 10px;
+            }
+
+            .icon-button:hover {
+                color: #ffffff80; /* Change la couleur de l'icône au survol */
+            }
+
+            /* Custom CSS for salon description */
+            .salon-description {
+                background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
+                color: white; /* White text color */
+                padding: 20px; /* Padding for better appearance */
+                border-radius: 10px; /* Rounded corners */
+                border: none;
+            }
+
+            .header-title h1 {
+                font-size: 48px; /* Adjust the font size as needed */
+            }
+
+            .header-title a {
+                color: inherit; /* Cette règle permet de conserver la couleur par défaut du texte */
+                text-decoration: none; /* Enlève le soulignement du lien */
+            }
+
+            
+
+            .container {
+                position: relative;
+                width: 100%;            
+            }
+
+            .body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                color: #333;
+                margin: 0;
+                padding: 0;
+            }
+
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+
+            .section {
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 20px;
+                margin-bottom: 20px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            .button {
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .input, .textarea {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            }
+
+            .label {
+                font-weight: bold;
+            }
+
+            /* Custom CSS */
+            .body {
+                font-family: 'Open Sans', sans-serif;
+                background-color: #f8f9fa;
+            }
+
+            .btn-info {
+                background-color: #17a2b8 !important;
+            }
+
+            .profile-pic {
+                width: 256px;
+                height: 256px;
+                
+            }
+
+            .left-content {
+                min-width: 500px; /* Définissez la largeur minimale souhaitée */
+                /* OU */
+                /* width: 800px;  Définissez une largeur fixe */
+            }
+
+            .main-content {
+                min-width: 450px; /* Définissez la largeur minimale souhaitée */
+                /* OU */
+                /* width: 800px;  Définissez une largeur fixe */
+            }
+
+            .right-content {
+                min-width: 600px; /* Définissez la largeur minimale souhaitée */
+                /* OU */
+                /* width: 800px;  Définissez une largeur fixe */
+            }
+
+
+            /* Styles pour les tables des deux côtés */
+            .table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+            .table th, .table td {
+                padding: 8px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .table th {
+                background-color: #f2f2f2;
+            }
+
+            /* Styles spécifiques à la table de gauche */
+            #tableResults {
+                background-color: #fff; /* Couleur de fond */
+                border: 1px solid #ddd; /* Bordure */
+            }
+
+            /* Styles spécifiques à la table de droite */
+            #tableResultsRE {
+                background-color: #fff; /* Couleur de fond */
+                border: 1px solid #ddd; /* Bordure */
+            }
+
+
+
+            /* Footer Styling */
+            .footer {
+                position: relative; 
+                width: 100%; 
+                height: 50px; /* Footer height */
+                bottom: 0;
+                text-align: center;
+                background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+                color: white; /* White text */
+                font-size: 20px; /* Set the font size */
+            }
+
+            .footer .container {
+                font-size: 20px; /* Apply font size to container */
+            }
+
+            .footer p {
+                font-size: 20px; /* Apply font size directly to paragraph */
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="main-content">
+            <nav class="navbar custom-navbar-background" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="http://localhost:3000/Acceuil">
+                        <img src="../Images/logo.png" width="auto" height="auto">
+                    </a>
+                    
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+                
+                <div id="navbarBasicExample" class="navbar-menu custom-navbar-background">
+                    <div class="navbar-start">
+                        <div class="navbar-item">
+                            <a id="Avis" href="http://localhost:3000/AvisCoiffeur" class="titre-carte enlever-soulignement">
+                                AvisClients
+                            </a>
+                        </div>
+        
+                        <div class="navbar-item">
+                            <a id="reservations" href= "http://localhost:3000/reservationCoiffeur" class="enlever-soulignement">
+                                RéservationsClients
+                            </a>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="header-title">
+                            <a href="http://localhost:3000/Acceuil" class="enlever-soulignement">
+                                <h1>UniK</h1>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="navbar-end"> 
+                        <div class="navbar-icons a"> 
+                            <a id="btnConnexion" href="/deconnexion" class="enlever-soulignement">
+                                <i class="fas fa-sign-in-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        
+        <div class="container mt-5">
+                <div class="columns">
+                    <!-- Left sidebar with user information -->
+                    <div class="column is-one-third left-content">
+                            <div class="card">
+                                <div class="card-content">
+                                            <div class="mt-0 profile-pic">
+                                                <img id="imageURL" class="responsive" src="">
+                                                <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                                                <button class="button is-link" id="fileButton" onclick="changePicture()">Upload photo</button>
+                                            </div>
+                                            <br />
+                                            <br />
+                                            <div class="media-content control">
+                                                <span>Stylist at salon : </span> <input id="idSalon" class="input"></p>
+                                            </div>
+                                    <div class="content">
+                                        <p><i class="fas fa-map-marker-alt"></i> Montreal, Quebec</p>
+                                        <p><i class="fas fa-briefcase"></i> University of Hairstyles</p>
+                                        <p><i class="fas fa-envelope"></i> ArianaGrande@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Reviews -->
+                            <div id="avis-container" class="card mt-5" style="max-height: 300px; overflow-y: auto;">
+                                <div class="card-content">
+                                    <h2 class="title is-4">Reviews :</h2>
+                                    <hr>
+                                    <div class="table-container" id="results">
+                                        <table class="table is-bordered is-hoverable" id="tableResults">
+                                            <thead>
+                                                <tr>
+                                                    <th tableid="id">Numero du review</th>
+                                                    <th>Clients</th>
+                                                    <th>Coiffeurs</th>
+                                                    <th>Note</th>
+                                                    <th>Reviews</th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- Main content -->
+                    <div class="mt-6 column main-content">
+                        <div class="card">
+                            <div class="card-content">
+                                <h2 class="title is-4">My account</h2>
+                                <hr>
+                                <form id="coiffeurForm">
+                                    <div class="field">
+                                        <label class="label">Prenom</label>
+                                        <div class="control">
+                                            <input class="input" id="prenom" type="text" placeholder="Prenom">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <label class="label">Nom</label>
+                                        <div class="control">
+                                            <input class="input" id="nom" type="text" placeholder="Nom">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <label class="label">Username</label>
+                                        <div class="control">
+                                            <input class="input" id="username" type="text" placeholder="Username">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <label class="label">Telephone</label>
+                                        <div class="control">
+                                            <input class="input" id="numTelephone" type="text" placeholder="Telephone">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <label class="label">Mot de passe</label>
+                                        <div class="control">
+                                            <input class="input" id="motDePasse" type="password" placeholder="Mot de passe">
+                                        </div>
+                                    </div>                                
+                                    
+                                    <!-- Bouton "Save" unique -->
+                                    <div class="control">
+                                        <button class="button is-link" id="saveButton">Save changes</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right sidebar with user information -->
+                    <div class="card right-content">
+                        <div class="card-content">
+                        
+                            <hr>
+                            <h2 class="title is-4">Disponibilites:</h2>
+                            <div class="content">
+                                <input class="input" id="Disponibilite" type="text" placeholder="Disponibilites">
+                            </div>
+                            <hr>
+                            <div id="reservation-container" class="card mt-5" style="max-height: 300px; overflow-y: auto;">
+                                <div class="card-content">
+                                    <h2 class="title is-4">Reservations :</h2>
+                                    <hr>
+                                    <div class="table-container" id="results">
+                                        <table class="table is-bordered is-hoverable is-fullwidth" id="tableResultsRE">
+                                            <thead>
+                                                <tr>
+                                                    <th tableid="id">Numero Reservation</th>
+                                                    <th>Date</th>
+                                                    <th>Heure</th>
+                                                    <th>Coiffeur</th>
+                                                    <th>Client</th>
+                                                    <th>Service</th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>              
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>All rights to Equipe 3</p>
+                <p>David Chiu | Capucine Dubois | Alvaro Rodriguez | Oumaima El Khayiri </p>
+            </div>
+        </footer>
+        <!-- Scripts -->
+        <script>
+            
+
+function changePicture() {
+    // Trigger click event on file input element
+    document.getElementById('fileInput').click();
+}
+
+function changePhoto() {
+    const fileInput = document.getElementById('fileInput');
+    const imageURL = document.getElementById('imageURL');
+
+    // Check if a file is selected
+    if (fileInput.files && fileInput.files[0]) {
+        const reader = new FileReader();
+
+        reader.onload = function(e) {
+            // Update image source with selected file
+            imageURL.src = e.target.result;
+        }
+
+        // Read the selected file as Data URL
+        reader.readAsDataURL(fileInput.files[0]);
+    }
+}
+
+changePicture()
+changePhoto()
+
+async function getCoiffeurData (idCoiffeur) {
+    try {
+        const response = await fetch(`/getProfilCoiffeur/${idCoiffeur}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+
+    if (response.ok) {
+        console.log(response)
+        const coiffeurData = await response.json()
+        console.log(coiffeurData)
+        return coiffeurData[0] // Return the first item in the response array
+    } else {
+        console.error('Failed to fetch coiffeur data:', response.statusText)
+        return null // Return null if the fetch failed
+    }
+    } catch (error) {
+        console.error('Error fetching coiffeur data:', error)
+      return null // Return null if an exception occurs
+    }
+}
+
+async function displayCoiffeurData () {
+    const idCoiffeur = sessionStorage.getItem('idCoiffeur') // Get the client ID from sessionStorage
+    console.log(idCoiffeur)
+    if (idCoiffeur) {
+      const coiffeurData = await getCoiffeurData(idCoiffeur) // Fetch client data using the corrected function
+        if (coiffeurData) {
+            // Fill the form with client data
+            document.getElementById('prenom').value = coiffeurData.prenom || ''
+            document.getElementById('nom').value = coiffeurData.nom || ''
+            document.getElementById('username').value = coiffeurData.username || ''
+            document.getElementById('numTelephone').value = coiffeurData.numTelephone || ''
+            document.getElementById('motDePasse').value = coiffeurData.motDePasse || ''
+            document.getElementById('idSalon').value = coiffeurData.idSalon || ''
+            document.getElementById('Disponibilite').value = coiffeurData.Disponibilite || ''
+            const imagUrl = document.getElementById('imageURL')
+            imagUrl.src = coiffeurData.imageURL
+            document.getElementById('imageURL').textContent = coiffeurData.imageURL || ''
+    } else {
+        console.error('No coiffeur data found for the provided ID.')
+    }
+    } else {
+        console.error('Coiffeur ID not found in sessionStorage.')
+    }
+}
+
+getCoiffeurData()
+displayCoiffeurData()
+
+
+
+
+/*
+async function chargerReviews() {
+    try {
+      const response = await fetch('/avisCoiffeurData'); // Assurez-vous d'ajuster l'URL en fonction de votre configuration serveur
+        if (!response.ok) {
+            throw new Error('Erreur lors de la récupération des avis');
+        }
+        const reviews = await response.json();
+        const avisContainer = document.getElementById('avis-container');
+      avisContainer.innerHTML = ''; // Effacer le contenu existant
+
+      // Créer un tableau pour afficher les avis
+        const table = document.createElement('table');
+      table.classList.add('table', 'is-fullwidth'); // Ajouter des classes pour styliser le tableau
+
+      // Créer l'en-tête du tableau
+        const tableHead = document.createElement('thead');
+        const headRow = document.createElement('tr');
+        const thClient = document.createElement('th');
+        thClient.textContent = 'Client';
+        const thReview = document.createElement('th');
+        thReview.textContent = 'Avis';
+        headRow.appendChild(thClient);
+        headRow.appendChild(thReview);
+        tableHead.appendChild(headRow);
+        table.appendChild(tableHead);
+
+      // Créer le corps du tableau avec les données des avis
+        const tableBody = document.createElement('tbody');
+        reviews.forEach(avis => {
+            const row = document.createElement('tr');
+            const cellClient = document.createElement('td');
+            cellClient.textContent = `Client ${avis.idClient}`;
+            const cellReview = document.createElement('td');
+            cellReview.textContent = avis.review;
+            row.appendChild(cellClient);
+            row.appendChild(cellReview);
+            tableBody.appendChild(row);
+        });
+        table.appendChild(tableBody);
+
+      // Ajouter le tableau au conteneur des avis
+        avisContainer.appendChild(table);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+// Appeler la fonction pour charger les avis lors du chargement de la page
+window.onload = chargerReviews;
+
+*/
+
+// JavaScript pour récupérer et afficher les avis depuis la base de données
+let tableResults = document.getElementById('tableResults');
+
+async function getReviews(id, idClient, idCoiffeur, note, review) {
+    let nombreLignes = tableResults.rows.length;
+    let nouvelleLigne = tableResults.insertRow(nombreLignes);
+
+    nouvelleLigne.insertCell(0).textContent = id;
+    nouvelleLigne.insertCell(1).textContent = idClient;
+    nouvelleLigne.insertCell(2).textContent = idCoiffeur;
+    nouvelleLigne.insertCell(3).textContent = note;
+    nouvelleLigne.insertCell(4).textContent = review;
+}
+
+// Affiche des reviews 
+async function chargerReviews() {
+    const response = await fetch('/avisCoiffeurData')
+    if (response.ok) {
+        const reviews = await response.json();
+        reviews.forEach((avis) => {
+            getReviews(
+                avis.idAvis, 
+                avis.idClient, 
+                avis.idCoiffeur, 
+                avis.note, 
+                avis.review
+            );
+        });
+    } else {
+        throw new Error ("Erreur lors de la récupération des reviews");
+    }
+}
+
+chargerReviews();
+
+
+let tableResultsRE = document.getElementById('tableResultsRE');
+
+
+async function getReservations(id, datereservation, Heure, idCoiffeur, idClient, idTypeCoiffure) {
+    let nombreLignes = tableResultsRE.rows.length;
+    let nouvelleLigne = tableResultsRE.insertRow(nombreLignes);
+
+    nouvelleLigne.insertCell(0).textContent = id;
+    nouvelleLigne.insertCell(1).textContent = datereservation;
+    nouvelleLigne.insertCell(2).textContent = Heure;
+    nouvelleLigne.insertCell(3).textContent = idCoiffeur;
+    nouvelleLigne.insertCell(4).textContent = idClient;
+    nouvelleLigne.insertCell(5).textContent = idTypeCoiffure;
+}
+
+// Affiche les reservations des coiffeurs
+async function chargerReservations() {
+    const response = await fetch('/reservation')
+    if (response.ok) {
+        const reservations = await response.json();
+        reservations.forEach((reservation) => {
+            getReservations(
+                reservation.idReservation, 
+                reservation.datereservation, 
+                reservation.Heure, 
+                reservation.idCoiffeur, 
+                reservation.idClient,
+                reservation.idTypeCoiffure
+            );
+        });
+    } else {
+        throw new Error ("Erreur lors de la récupération des reviews");
+    }
+}
+
+chargerReservations();
+
+function afficherNavbar () {
+    const token = sessionStorage.getItem('token')
+    if (token) {
+      document.getElementById('btnConnexion').textContent = 'Déconnexion'
+    }
+    const btnDeconnexion = document.getElementById('btnConnexion')
+    btnDeconnexion.addEventListener('click', function () {
+      if (token) {
+        sessionStorage.removeItem('token')
+        window.location.href = '/Acceuil'
+      } else {
+        window.location.href = '/Acceuil'
+      }
+    })
+  }
+afficherNavbar();
+
+/*
+// JavaScript pour récupérer et afficher les avis depuis la base de données
+async function getCoiffeurReviews(idCoiffeur) {
+    try {
+        const response = await fetch(`/avisCoiffeurData/${idCoiffeur}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            const reviewsData = await response.json();
+            const reviewsContainer = document.getElementById('reviews-list');
+
+            // Clear previous reviews
+            reviewsContainer.innerHTML = '';
+
+            // Display each review
+            reviewsData.forEach(review => {
+                const reviewElement = document.createElement('div');
+                reviewElement.classList.add('review-item');
+
+                // Create elements for review details
+                const reviewRating = document.createElement('p');
+                reviewRating.textContent = `Rating: ${review.note}`;
+
+                const reviewContent = document.createElement('p');
+                reviewContent.textContent = review.review;
+
+                // Append review details to review element
+                reviewElement.appendChild(reviewRating);
+                reviewElement.appendChild(reviewContent);
+
+                // Append review element to reviews container
+                reviewsContainer.appendChild(reviewElement);
+            });
+        } else {
+            console.error('Failed to fetch coiffeur reviews:', response.statusText);
+        }
+    } catch (error) {
+        console.error('Error fetching coiffeur reviews:', error);
+    }
+}
+
+// Call function to display coiffeur reviews when the page loads
+window.onload = function() {
+    const coiffeurID = // récupérer l'ID du coiffeur connecté depuis la session ou l'URL
+    getCoiffeurReviews(coiffeurID);
+};
+*/
+
+
+/*
+// message
+
+// Récupérer l'ID du coiffeur à partir de l'URL
+const coiffeurID = window.location.pathname.split('/').pop();
+
+// Envoyer une requête GET au serveur pour récupérer les informations du coiffeur
+fetch(`/getProfilCoiffeur/${coiffeurID}`)
+    .then(response => response.json())
+    .then(data => {
+        // Mettre à jour les champs du formulaire avec les informations récupérées
+        document.querySelector('input[name="Prenom"]').value = data[0].prenom;
+        document.querySelector('input[name="Nom"]').value = data[0].nom;
+        document.querySelector('input[name="Username"]').value = data[0].username;
+        document.querySelector('input[name="Telephone"]').value = data[0].numTelephone;
+        // Mettre à jour les autres champs si nécessaire
+    })
+    .catch(error => console.error('Erreur lors de la récupération des informations du coiffeur :', error));
+
+
+function maskPassword (motDePasse) {
+  return '*'.repeat(motDePasse.length) // Replace each character with asterisks
+}
+
+function display (data) {
+    const prenom = document.getElementById('coiffeurPrenom')
+    const nom = document.getElementById('coiffeurNomfamille')
+    const username = document.getElementById('coiffeurUsername')
+    const motDePasse = document.getElementById('coiffeurPass')
+    const numeroTelephone = document.getElementById('coiffeurPhoneNumber')
+
+    console.log(data[0])
+
+    prenom.textContent = data[0].prenom
+    nom.textContent = data[0].nom
+    username.textContent = data[0].username
+    motDePasse.textContent = maskPassword(data[0].motDePasse)
+    numeroTelephone.textContent = data[0].numTelephone
+}
+
+async function obtenirID () {
+    const url = new URLSearchParams(window.location.search)
+    const coiffeurID = url.get('coiffeurID')
+    const newURL = `/getProfilCoiffeur/${coiffeurID}`
+
+    const response = await fetch(newURL)
+    if (response.ok) {
+    const coiffeur = await response.json()
+    console.log(coiffeur)
+    display(coiffeur)
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+obtenirID()
+})
+
+
+*/
+        </script>
+    </body>
+</html>

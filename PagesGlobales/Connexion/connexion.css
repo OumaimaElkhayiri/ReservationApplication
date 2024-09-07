@@ -1,0 +1,149 @@
+html, body {
+  background-color: #ffffff;
+  margin-top: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.hero-body {
+  margin-top: 10%;
+  display: flex; /* Flexbox for centering */
+  flex-direction: column; /* Column layout */
+  justify-content: center; /* Vertical centering */
+  align-items: center; /* Horizontal centering */
+}
+
+.field:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.navbar {
+  margin: 0;
+  position: relative;
+  top: 0;
+  width: 100%;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.8); 
+}
+
+.navbar-icons {
+  display: flex; /* Flex layout for icons */
+  flex-direction: row; /* Align items horizontally */
+  gap: 10px; /* Space between icons */
+  align-items: center; /* Vertically center the icons */
+}
+
+.navbar-icons a {
+  font-size: 1.5em; /* Increase the font size to make icons bigger */
+  padding: 10px; /* Add padding for extra space around icons */
+}
+
+.navbarRecherche {
+  position: absolute;
+  top:50%;
+  left:70%;
+
+}
+
+.icon-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.icon-button:hover {
+  color: #ffffff80; /* Change la couleur de l'icône au survol */
+}
+
+  
+.header-title {
+  position: absolute;
+  top: 50%;
+  left: 44.5%;
+  right:80%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.header-title h1 {
+  font-size: 48px; /* Adjust the font size as needed */
+}
+
+.enlever-soulignement {
+  text-decoration: none;
+  color:white;
+}
+
+/* Contact Message Styling */
+.contact-message {
+  font-size: 22px; /* Slightly smaller font size */
+}
+
+/* Form Column Styling */
+.column.right {
+  padding: 20px; /* Padding for spacing */
+}
+
+/* Button Styling */
+.button.is-link {
+  background-color: #000000; /* Black background */
+  color: white; /* White text */
+}
+
+.button.is-link:hover {
+  background-color: #333333; /* Dark gray on hover */
+}
+
+/* Container Margins */
+.container {
+  margin-bottom: 20px; /* Spacing between sections */
+}
+
+/* Adjusting the form container's width */
+.column.right {
+  padding: 20px; /* Padding for spacing */
+  width: 50%; /* Increase the width to 50% of the container */
+}
+
+/* Adjusting the height and width of input fields */
+.input.is-medium {
+  height: 40px; /* Increase the height of input fields */
+}
+
+/* Adjusting the button size */
+.button.is-link {
+  background-color: #000000; /* Black button background */
+  color: white; /* White text */
+  height: 40px; /* Increase the button height */
+  width: 100%; /* Make the button full-width */
+}
+
+.footer {
+  position: fixed; /* Make the footer fixed to the bottom */
+  bottom: 0; /* Align to the bottom of the viewport */
+  width: 100%; /* Full-width footer */
+  height: 50px; /* Fixed height */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+  color: white; /* White text */
+  font-size: 20px; /* Font size for footer text */
+}
+
+/* Adjust the hero section to account for the footer */
+.hero.is-fullheight {
+  min-height: calc(100vh - 50px); /* Deduct footer height from full-height section */
+}
+
+.footer .container {
+  font-size: 20px; /* Apply font size to container */
+}
+
+.footer p {
+  font-size: 20px; /* Apply font size directly to paragraph */
+}

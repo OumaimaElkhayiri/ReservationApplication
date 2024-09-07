@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="connexion.css"> 
+</head>
+<body>
+  <div>
+    <nav class="navbar custom-navbar-background" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="http://localhost:3000/Acceuil">
+                <img src="../Images/logo.png" width="auto" height="auto">
+            </a>
+            
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        
+        <div id="navbarBasicExample" class="navbar custom-navbar-background">
+            <div class="navbar-start">
+            
+                <div class="navbar-item">
+                    <a id="informations" href="/informations" class="enlever-soulignement">
+                        Informations
+                    </a>
+                </div>
+            
+                    <div class="navbar-item">
+                        <a id="reservations" href= "/connexion" class="enlever-soulignement">
+                        Rendez-vous
+                        </a>
+                    </div>
+    
+                <div class="navbar-item">
+                    <a id="salons" href= "/Salons" class="enlever-soulignement">
+                        Salons
+                    </a>
+                </div>
+            </div>
+    
+                <div class="header-title">
+                    <a href="http://localhost:3000/Acceuil" class="enlever-soulignement">
+                        <h1>UniK</h1>
+                    </a>
+                    </div>
+          
+            <div class="navbar-end"> 
+                    <a href="/creationCompte" class="enlever-soulignement">
+                        <i class="fas fa-user-plus"></i>
+                    </a>
+                </div>
+            </div> 
+        </div>
+    </nav>
+    </div>
+    <section class="hero is-fullheight">
+        <div class="hero-body">
+            <div class="container has-text-centered"> 
+                <div class="columns is-centered is-8 is-variable"> 
+                    <div class="column right has-text-centered" style="padding: 20px; width: 50%;"> 
+                        <h1 class="title is-4">Connexion</h1>
+                        <p class="description">Entrez votre nom d'utilisateur et votre mot de passe</p>
+                        <form>
+                            <div class="field"> 
+                                <div class="control">
+                                  <input class="input is-medium" type="text" placeholder="username" id="username">
+                                </div>
+                            </div>
+                            <div class="field"> <!-- Password Field -->
+                                <div class="control">
+                                    <input class="input is-medium" type="password" placeholder="mot de passe" id="password">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="checkbox">
+                                    <input type="checkbox" name="estCoiffeur" id="estCoiffeur"/>Je suis un coiffeur</label>
+                                </label>
+                            </div>
+                            <a href="../prise_rdv.html">
+                            <button id="btnConnexion" class="button is-link is-fullwidth is-medium" style="background-color: black; color: white; height: 40px;">
+                              Connexion
+                          </button>
+                            </a>
+                          <p class="has-text-centered" style="margin-top: 10px;">
+                            Pas de compte? 
+                            <a href="/creationCompte" style="color: black; text-decoration: underline;">
+                                Inscrivez-vous
+                            </a>
+                        </p>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+    <!-- Additional Scripts -->
+    <script src="connexion.js" type="module"></script> <!-- Your script -->
+    <footer class="footer">
+      <div>
+          <p>All rights to Equipe 3</p>
+          <p>David Chiu | Capucine Dubois | Alvaro Rodriguez | El khayiri Oumaima</p>
+      </div>
+    </footer>
+</body>
+</html>

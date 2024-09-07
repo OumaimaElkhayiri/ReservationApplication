@@ -1,0 +1,88 @@
+html, body {
+    background-color: #ffffff; /* White background */
+    margin-top: 0;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ensure full page height */
+    flex-direction: column;
+  }
+  
+  .field:not(:last-child) {
+    margin-bottom: 20px; /* Space between fields */
+  }
+  
+  .navbar {
+    margin: 0;
+    position: relative;
+    top: 0;
+    width: 100%; /* Full width */
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+  }
+  
+  .navbar-icons {
+    display: flex; /* Flex layout for icons */
+    flex-direction: row; /* Horizontal alignment */
+    gap: 10px; /* Space between icons */
+    align-items: center; /* Vertically center the icons */
+  }
+  
+  .navbar-icons a {
+    font-size: 1.5em; /* Larger icon size */
+    padding: 10px; /* Add padding for space around icons */
+  }
+  
+  .icon-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  .icon-button:hover {
+    color: #ffffff80; /* Light gray on hover */
+  }
+  
+  .header-title {
+    position: absolute;
+    top: 50%;
+    left: 35%; /* Adjust for centering */
+    right: 80%; 
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .header-title h1 {
+    font-size: 48px; /* Adjust the font size */
+  }
+  
+  .enlever-soulignement {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .button.is-link {
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    height: 40px; /* Button height */
+    border: 1px solid black; /* Add a border */
+    border-radius: 0; /* Remove rounded corners */
+  }
+  
+  .button.is-link:hover {
+    background-color: #333333; /* Dark gray on hover */
+  }
+  
+  #coiffeurs {
+    padding: 0; 
+}
+
+
+
+
+
+
+
+
